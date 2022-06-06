@@ -1,6 +1,7 @@
 # Feedback App - An app developed using Django, MongoDB and Angular, used to collect feedback from users
 
 ## This app allows users to add a feedback and get a list of all the submitted feedbacks.
+The feedback dir contains the Angular code while the Django code is located in feedbackProject.
 
 ## Screenshots
 
@@ -24,6 +25,7 @@ docker exec -it <container_id_generated_by_previous_command> /bin/bash
 python manage.py runserver 0.0.0.0:8000
 docker run --rm -it -p 4200:80 katmem/feedback_app:feedback_angular
 ```
+After the above commands have been run, the app can be access from http://localhost:4200/
 
 ### Second Way
 (requires .env file)

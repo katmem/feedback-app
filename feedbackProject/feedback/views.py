@@ -1,4 +1,4 @@
-"""Views declaration"""
+""" Views declaration """
 from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.parsers import JSONParser
@@ -8,9 +8,7 @@ from .serializers import FeedbackSerializer
 
 @api_view(['POST'])
 def add_feedback(request):
-    """
-    This view responds only to POST requests and is used for adding new feedbacks.
-    """
+    """ This view responds only to POST requests and is used for adding new feedbacks. """
     if request.method == 'POST':
         feedback_data = JSONParser().parse(request)
         feedback_serializer = FeedbackSerializer(data=feedback_data)
@@ -21,7 +19,7 @@ def add_feedback(request):
 
 @api_view()
 def get_all_feedbacks(request):
-    """This view responds only to GET requests and is used for getting all the submitted feedbacks"""
+    """ This view responds only to GET requests and is used for getting all the submitted feedbacks """
     feedbacks = Feedback.objects.all()
     if request.method == 'GET':
         feedback_serializer = FeedbackSerializer(feedbacks, many=True)

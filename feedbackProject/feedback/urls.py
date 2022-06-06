@@ -1,4 +1,4 @@
-"""URLs definition and matching with views"""
+""" URLs definition and matching with views """
 from django.urls import re_path
 from .views import add_feedback, get_all_feedbacks
 
