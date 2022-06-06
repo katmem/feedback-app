@@ -1,0 +1,14 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let feedback of feedbacks">
+        <td>{{feedback.title}}</td>
+        <td>{{feedback.summary}}</td>
+    </tr>
+  </tbody>
+</table>
