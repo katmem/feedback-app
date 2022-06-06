@@ -22,8 +22,8 @@ docker pull katmem/feedback_app:feedback_django
 docker pull katmem/feedback_app:feedback_angular
 docker run -t -d -p 8000:8000 katmem/feedback_app:feedback_django
 docker exec -it <container_id_generated_by_previous_command> /bin/bash
-python manage.py runserver 0.0.0.0:8000
-docker run --rm -it -p 4200:80 katmem/feedback_app:feedback_angular
+python manage.py runserver 0.0.0.0:8000 (run inside the container that was created from the previous command)
+docker run --rm -it -p 4200:80 katmem/feedback_app:feedback_angular (run in a new terminal)
 ```
 After the above commands have been run, the app can be access from http://localhost:4200/
 
